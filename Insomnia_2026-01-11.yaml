@@ -1,0 +1,193 @@
+type: collection.insomnia.rest/5.0
+name: Python API de users
+meta:
+  id: wrk_32c32d8f798b4235b0e12696f35efaad
+  created: 1768138587329
+  modified: 1768138587329
+  description: ""
+collection:
+  - name: user
+    meta:
+      id: fld_002f38b051904900b18903b6d0f1b0eb
+      created: 1768138679047
+      modified: 1768138679047
+      sortKey: -1768138679047
+      description: ""
+    children:
+      - url: "{{ _.BASE_URL }}/user/1"
+        name: DELETE user
+        meta:
+          id: req_468f5da554e64963a8892a01e8bf082b
+          created: 1768138683334
+          modified: 1768139076785
+          isPrivate: false
+          description: ""
+          sortKey: -1768138683334
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/user/1"
+        name: PUT update user
+        meta:
+          id: req_668d81cdfe6b4a8192700a4b8833192b
+          created: 1768138686476
+          modified: 1768139065185
+          isPrivate: false
+          description: ""
+          sortKey: -1768138686476
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"password": "admin123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/user"
+        name: POST user
+        meta:
+          id: req_8e4391ef49984ad3ae0be57c7751a55c
+          created: 1768138688987
+          modified: 1768139024086
+          isPrivate: false
+          description: ""
+          sortKey: -1768138688987
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username": "Luis",
+            	"password": "123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.BASE_URL }}/user/1"
+        name: GET user
+        meta:
+          id: req_23a5da03940d4f978b7191f9828fa743
+          created: 1768138691764
+          modified: 1768138815634
+          isPrivate: false
+          description: ""
+          sortKey: -1768138691764
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: "{{ _.BASE_URL }}/logout"
+    name: GET logout
+    meta:
+      id: req_ab60b1df2d2c4b348c9b558a436d3ddf
+      created: 1768138824914
+      modified: 1768138966834
+      isPrivate: false
+      description: ""
+      sortKey: -1768138824914
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.BASE_URL }}/login"
+    name: POST login
+    meta:
+      id: req_63325fcfd3b041a7b0ca7342c28c8990
+      created: 1768138828041
+      modified: 1768138960457
+      isPrivate: false
+      description: ""
+      sortKey: -1768138828041
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Megelado",
+        	"password": "admin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4f72dab91b336319b115702cabad41ec71d738c2
+    created: 1768138587355
+    modified: 1768139099751
+  cookies:
+    - key: session
+      value: .eJy9jrsJwDAMBVcRrzYZwFOkDyYII39AiUPkznj3eIpUr7g7eANnUrYiBn8MUF-DS8w4Cxx2FTYhbZnqTb0Rx7gg9VKNnuVsCNP93AW3Tr9iBT6xmswPX5ZCKg.aWOpWw.yBJ7CvGGLfo7oo2iRn2pTKc_W-o
+      domain: 127.0.0.1
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2026-01-11T13:42:30.107Z
+      lastAccessed: 2026-01-11T13:44:59.751Z
+      id: de2ee35e-c06b-4f32-8a84-b827311391bf
+environments:
+  name: Base Environment
+  meta:
+    id: env_4f72dab91b336319b115702cabad41ec71d738c2
+    created: 1768138587352
+    modified: 1768138663560
+    isPrivate: false
+  data:
+    BASE_URL: http://127.0.0.1:5000
